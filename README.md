@@ -15,9 +15,9 @@ Jenis Surat :
 > > > Surat Keterangan Tidak Mampu <br>
 > > > Surat Keterangan Usaha <br>
 
-import database anjungan_surat.sql
-buat atau ubah file .env.example menjadi .env
-buka terminal/command Prompt(CMD) directory folder projectnya.
+import database anjungan_surat.sql <br>
+buat atau ubah file .env.example menjadi .env <br>
+buka terminal/command Prompt(CMD) directory folder projectnya. <br>
 
 ketikkan di command Prompt yang telah dibuka:
 
@@ -28,11 +28,11 @@ ketikkan di command Prompt yang telah dibuka:
 
 Users :
 
-usr : admin
+usr : admin <br>
 pass : admin
 
-usr : kepala.desa
+usr : kepala.desa <br>
 pass : password
 
-usr : petugas_satu
+usr : petugas_satu <br>
 pass : password
