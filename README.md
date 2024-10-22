@@ -4,9 +4,9 @@ Repository Anjungan Surat
 
 Sebelum menggunakan pastikan sudah terinstal
 
-> php 8 keatas
-> Database MySql
-> composer
+> > php 8 keatas
+> > Database MySql
+> > composer
 
 Jenis Surat :
 
@@ -21,10 +21,10 @@ buka terminal/command Prompt(CMD) directory folder projectnya.
 
 ketikkan di command Prompt yang telah dibuka:
 
-> composer update
-> enter
-> composer upgrade
-> enter
+> > composer update
+> > enter
+> > composer upgrade
+> > enter
 
 Users :
 
