@@ -2,12 +2,6 @@
 
 Repository Anjungan Surat
 
-Sebelum menggunakan pastikan sudah terinstal
-
-> > php 8 keatas <br>
-> > Database MySql <br>
-> > composer <br>
-
 Jenis Surat :
 
 > > > Surat Keterangan Domisili <br>
@@ -17,24 +11,15 @@ Jenis Surat :
 
 Import database anjungan_surat.sql
 
-Ubah file .env.example menjadi .env
-
-Buka terminal/command Prompt(CMD) directory folder projectnya. <br>
-
-ketikkan di command Prompt yang telah dibuka:
-
-> > composer update <br>
-> > enter <br>
-> > composer upgrade <br>
-> > enter <br>
+Buka file .env dan sesuaikan dengan konfigurasi panjenengan
 
 Users :
 
-usr : admin <br>
+user : admin <br>
 pass : admin
 
-usr : kepala.desa <br>
+user : kepala.desa <br>
 pass : password
 
-usr : petugas_satu <br>
+user : petugas_satu <br>
 pass : password
