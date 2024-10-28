@@ -17,9 +17,3 @@ Users :
 
 user : admin <br>
 pass : admin
-
-user : kepala.desa <br>
-pass : password
-
-user : petugas_satu <br>
-pass : password
