@@ -16,13 +16,35 @@ class SuratModel extends Database
             'nik',
             'jenis_surat',
             'keterangan',
-            'tgl_cetak'
+            'tgl_cetak',
+            'id_user'
         ]);
     }
 
     public function getAll()
     {
-        $query = "SELECT * FROM tb_surat JOIN tb_warga USING (nik) ORDER BY tb_surat.tgl_cetak DESC";
+        $query = "SELECT 
+                        id_surat,
+                        tb_surat.nik AS nik,
+                        tb_warga.nama AS nama,
+                        tb_warga.jk,
+                        jenis_surat,
+                        keterangan,
+                        tgl_cetak,
+                        tb_surat.id_user,
+                        tb_perangkat.nik AS nip,
+                        tb_perangkat.nama AS nm_perangkat,
+                        jabatan
+                  FROM tb_surat JOIN tb_warga USING (nik) JOIN tb_users USING (id_user) LEFT JOIN tb_profile ON tb_users.id_user=tb_profile.id_user
+                  LEFT JOIN tb_perangkat ON tb_profile.nik=tb_perangkat.nik ORDER BY tb_surat.tgl_cetak DESC";
+        // $query = "SELECT 
+        // id_surat,
+        // nik,
+        // jenis_surat,
+        // keterangan,
+        // tgl_cetak,
+        // id_user
+        // FROM tb_surat JOIN tb_warga USING (nik) JOIN tb_users USING (id_user) ORDER BY tb_surat.tgl_cetak DESC";
         return $this->qry($query)->fetchAll(PDO::FETCH_ASSOC);
     }
 
@@ -34,7 +56,8 @@ class SuratModel extends Database
             'nik' => $data['nik'],
             'jenis_surat' => $data['jenis_surat'],
             'keterangan' => $data['keterangan'],
-            'tgl_cetak' => $tanggal
+            'tgl_cetak' => $tanggal,
+            'id_user' => $_SESSION['login']['id_user']
         ];
         return $this->insertData($table);
     }

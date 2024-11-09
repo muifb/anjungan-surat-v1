@@ -16,23 +16,27 @@
                         <tr>
                             <th>No</th>
                             <th>Nama</th>
-                            <th>Jenis Kelamin</th>
                             <th>Jenis Surat</th>
                             <th>Keterangan</th>
                             <th>Tanggal Cetak</th>
+                            <th>Dicetak Oleh</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php $nomor = 1;
+                        <?php
+
+                        use PhpParser\Node\Stmt\Echo_;
+
+                        $nomor = 1;
                         foreach ($data as $row) : ?>
                             <tr>
                                 <td><?= $nomor++; ?></td>
                                 <td><?= $row['nama']; ?></td>
-                                <td><?= $row['jk']; ?></td>
                                 <td><?= $row['jenis_surat']; ?></td>
                                 <td><?= $row['keterangan']; ?></td>
-                                <td><?= Tanggal::tanggal_indo($row['tgl_cetak'], true); ?></td>
+                                <td><?= Tanggal::tgl_idn($row['tgl_cetak'], true); ?></td>
+                                <td><?= $row['nm_perangkat'] ? $row['nm_perangkat'] : 'Admin'; ?></td>
                                 <td>
                                     <a href="<?= APPURL . '/form-surat/cetak-surat/' . $row['id_surat']; ?>" class="btn btn-outline-primary btn-sm" type="button">
                                         <i class="bi bi-printer-fill"></i>

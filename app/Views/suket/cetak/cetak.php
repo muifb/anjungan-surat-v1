@@ -160,6 +160,10 @@
         text-align: right;
     }
 
+    .alamat-tujuan {
+        margin-left: 25%;
+    }
+
     .tertanda {
         margin-left: 7%;
     }
@@ -297,12 +301,16 @@
             <div id="tgl-srt" class="col-md-6">
                 <p id="tls">Bakalankrapyak, <?= Tanggal::tanggal_indo($data['tgl_cetak']); ?></p>
             </div>
-            <div id="ttd" class="row">
-                <div class="col-3"></div>
-                <div class="col-4"></div>
-                <div class="col-5">
-                    <p id="camat"><strong>KEPALA DESA BAKALANKRAPYAK</strong></p>
-                    <div id="nama-camat"><strong><?= $dt['nama']; ?></strong></div>
+            <div id="alamat" class="row">
+                <div id="lampiran" class="col-6">
+                    <p id="camat"><strong></br>Pemohon</br></strong></p>
+                    <div id="nama-camat"><strong><?= $data['nama']; ?></strong></div>
+                </div>
+                <div id="tgl-srt" class="col-6">
+                    <div class="alamat-tujuan">
+                        <p id="camat"><strong>KEPALA DESA BAKALANKRAPYAK</strong></p>
+                        <div id="nama-camat"><strong><?= $dt['nama']; ?></strong></div>
+                    </div>
                 </div>
             </div>
         </div>

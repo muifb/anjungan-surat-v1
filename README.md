@@ -11,7 +11,7 @@ Jenis Surat :
 
 Import database anjungan_surat.sql
 
-Buka file .env dan sesuaikan dengan konfigurasi panjenengan
+Buka file .env jika belum ada ubah file .env.example menjadi .env dan sesuaikan dengan konfigurasi panjenengan
 
 Users :
 

@@ -17,6 +17,18 @@ class Tanggal
         return $tanggal . ' ' . $bulan . ' ' . $tahun;
     }
 
+    public static function tgl_idn($tgl, $hr = false)
+    {
+        $hari = self::getHari(date('N', strtotime($tgl)));
+        $tanggal = substr($tgl, 8, 2);
+        $bulan = self::getShortBulan(substr($tgl, 5, 2));
+        $tahun = substr($tgl, 0, 4);
+        if ($hr) {
+            return $hari . ', ' . $tanggal . ' ' . $bulan . ' ' . $tahun;
+        }
+        return $tanggal . ' ' . $bulan . ' ' . $tahun;
+    }
+
     public static function tgl_indo($tgl, $hr = false)
     {
         $hari = self::getHari(date('N', strtotime($tgl)));
@@ -78,40 +90,40 @@ class Tanggal
     {
         switch ($bln) {
             case 1:
-                return "Januari";
+                return "Jan";
                 break;
             case 2:
-                return "Februari";
+                return "Feb";
                 break;
             case 3:
-                return "Maret";
+                return "Mar";
                 break;
             case 4:
-                return "April";
+                return "Apr";
                 break;
             case 5:
                 return "Mei";
                 break;
             case 6:
-                return "Juni";
+                return "Jun";
                 break;
             case 7:
-                return "Juli";
+                return "Jul";
                 break;
             case 8:
-                return "Agustus";
+                return "Ags";
                 break;
             case 9:
-                return "September";
+                return "Sep";
                 break;
             case 10:
-                return "Oktober";
+                return "Okt";
                 break;
             case 11:
-                return "November";
+                return "Nov";
                 break;
             case 12:
-                return "Desember";
+                return "Des";
                 break;
         }
     }
