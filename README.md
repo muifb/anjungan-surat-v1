@@ -2,7 +2,7 @@
 
 Repository Anjungan Surat
 
-Jenis Surat :
+Jenis Surat Yang Tersedia :
 
 > > > Surat Keterangan Domisili <br>
 > > > Surat Keterangan Izin Tidak Kerja <br>
