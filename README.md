@@ -11,6 +11,8 @@ Jenis Surat Yang Tersedia :
 
 Import database anjungan_surat.sql
 
+Buka terminal pada folder project ketikan "composer update" enter dan "composer upgrade" enter
+
 Buka file .env jika belum ada ubah file .env.example menjadi .env dan sesuaikan dengan konfigurasi panjenengan
 
 Users :

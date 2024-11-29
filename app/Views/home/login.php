@@ -127,7 +127,7 @@
                     <div class="col align-self-center">
                         <div class="service-item">
                             <form action="<?= APPURL . '/login' ?>" method="post">
-                                <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+                                <h1 class="h3 mb-3 fw-normal">Anjungan Surat</h1>
 
                                 <div class="form-floating">
                                     <input type="text" class="form-control" id="username" name="username" placeholder="name@example.com" autofocus>
@@ -138,8 +138,8 @@
                                     <label for="password">Password</label>
                                 </div>
 
-                                <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
-                                <p class="mt-5 mb-3 text-body-secondary">&copy; 2024</p>
+                                <button class="btn btn-primary w-100 py-2" type="submit">Masuk</button>
+                                <p class="mt-5 mb-3 text-body-secondary">&copy; Bakalankrapyak 2024</p>
                             </form>
                         </div>
                     </div>

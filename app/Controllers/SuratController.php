@@ -30,13 +30,25 @@ class SuratController extends Controller
         }
 
         if ($surat == 'domisili') {
-            $data = ['surat' => 'Domisili'];
+            $data = [
+                'surat' => 'Domisili',
+                'srt' => 'DMS'
+            ];
         } elseif ($surat == 'izin') {
-            $data = ['surat' => 'Izin Tidak Kerja'];
+            $data = [
+                'surat' => 'Izin Tidak Kerja',
+                'srt' => 'ITK'
+            ];
         } elseif ($surat == 'sktm') {
-            $data = ['surat' => 'Tidak Mampu'];
+            $data = [
+                'surat' => 'Tidak Mampu',
+                'srt' => 'TM'
+            ];
         } else {
-            $data = ['surat' => 'Usaha'];
+            $data = [
+                'surat' => 'Usaha',
+                'srt' => 'USH'
+            ];
         }
 
         $this->view('template/template-header', $d);
@@ -46,9 +58,12 @@ class SuratController extends Controller
 
     public function insertSurat()
     {
+        $nomor = $_POST['srt'] . ' / ' . $_POST['srt1'] . ' / ' . $_POST['srt2'];
+        $_POST['no_surat'] .= $nomor;
         $fields = [
             'nik' => 'string | required',
             'jenis_surat' => 'string | required',
+            'no_surat' => 'string | required',
             'keterangan' => 'string | required',
         ];
         $message = [

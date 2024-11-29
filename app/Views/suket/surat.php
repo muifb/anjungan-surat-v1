@@ -62,6 +62,31 @@
                     </div>
                 </div>
 
+                <div class=" row mb-3">
+                    <label for="nomorSurat" class="form-label">Nomor Surat</label>
+                    <input type="hidden" class="form-control" name="no_surat" id="nosurat">
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" name="srt" id="nomorSurat" aria-describedby="nomorHelpBlock" required>
+                        <div id="nomorHelpBlock" class="form-text">
+                            Nomor, Contoh : 202
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="nomorSurat1" value="<?= Tanggal::bulan_romawi(date('m')); ?>" aria-describedby="nomorHelpBlock1" disabled readonly>
+                        <input type="hidden" class="form-control" name="srt1" value="<?= Tanggal::bulan_romawi(date('m')); ?>" id="bulan">
+                        <div id="nomorHelpBlock1" class="form-text">
+                            Bulan
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" name="srt2" value="<?= date('Y'); ?>" id="nomorSurat2" aria-describedby="nomorHelpBlock2" disabled readonly>
+                        <input type="hidden" class="form-control" name="srt2" value="<?= date('Y'); ?>" id="tahun">
+                        <div id="nomorHelpBlock2" class="form-text">
+                            Tahun
+                        </div>
+                    </div>
+                </div>
+
                 <div class="mb-3">
                     <label for="Keterangan" class="form-label">Keterangan</label>
                     <textarea class="form-control keterangan" name="keterangan" id="Keterangan" rows="2"></textarea>
@@ -76,9 +101,9 @@
                 </div>
 
             </div>
+
         </form>
         <!-- End Form -->
-
     </div>
 
     <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

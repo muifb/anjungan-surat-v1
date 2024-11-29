@@ -43,6 +43,7 @@
             }
 
             .header,
+            .logo-header,
             .no-print,
             .logo,
             .sitename,
@@ -64,6 +65,7 @@
         <div class="container-fluid container-xl position-relative d-flex align-items-center no-print">
 
             <a href="index.html" class="logo d-flex align-items-center me-auto">
+                <img class="me-2 logo-header" src="<?= APPURL . '/assets/img/lambang-kabupaten-kudus.png' ?>" alt="">
                 <h1 class="sitename">Anjungan Surat</h1>
             </a>
 

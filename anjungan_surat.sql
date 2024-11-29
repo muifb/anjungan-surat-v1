@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 09 Nov 2024 pada 13.56
+-- Waktu pembuatan: 29 Nov 2024 pada 17.00
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.1.17
 
@@ -65,7 +65,8 @@ CREATE TABLE `tb_profile` (
 
 INSERT INTO `tb_profile` (`id_profile`, `id_user`, `nik`) VALUES
 (1, 2, '2024000000000001'),
-(2, 3, '2024000000000002');
+(2, 3, '2024000000000002'),
+(3, 4, '2024000000000003');
 
 -- --------------------------------------------------------
 
@@ -77,6 +78,7 @@ CREATE TABLE `tb_surat` (
   `id_surat` int(9) NOT NULL,
   `nik` varchar(25) NOT NULL,
   `jenis_surat` varchar(50) NOT NULL,
+  `no_surat` varchar(50) NOT NULL DEFAULT '16/17/KDS/XI/2024',
   `keterangan` varchar(255) NOT NULL,
   `tgl_cetak` datetime NOT NULL,
   `id_user` int(11) NOT NULL DEFAULT 1
@@ -86,9 +88,11 @@ CREATE TABLE `tb_surat` (
 -- Dumping data untuk tabel `tb_surat`
 --
 
-INSERT INTO `tb_surat` (`id_surat`, `nik`, `jenis_surat`, `keterangan`, `tgl_cetak`, `id_user`) VALUES
-(1, '2024082800000001', 'Domisili', 'Test Cetak Domisili', '2024-11-09 19:44:15', 3),
-(2, '2024082800000001', 'Usaha', 'Cek Cetak Surat Keterangan Usaha', '2024-11-09 19:45:35', 1);
+INSERT INTO `tb_surat` (`id_surat`, `nik`, `jenis_surat`, `no_surat`, `keterangan`, `tgl_cetak`, `id_user`) VALUES
+(1, '2024082800000001', 'Domisili', '16/17/KDS/XI/2024', 'Test Cetak Domisili', '2024-11-09 19:44:15', 3),
+(2, '2024082800000001', 'Usaha', '16/17/KDS/XI/2024', 'Cek Cetak Surat Keterangan Usaha', '2024-11-09 19:45:35', 1),
+(3, '2024082800000001', 'Izin Tidak Kerja', '16/17/KDS/XI/2024', 'Cek Izin Tidak Kerja', '2024-11-09 19:59:02', 3),
+(4, '2024082800000001', 'Usaha', '16/17/KDS/XI/2024', 'Test Cetak Dengan Petugas Dua', '2024-11-09 21:40:51', 4);
 
 -- --------------------------------------------------------
 
@@ -110,7 +114,8 @@ CREATE TABLE `tb_users` (
 INSERT INTO `tb_users` (`id_user`, `username`, `password`, `level`) VALUES
 (1, 'admin', '$2y$10$0T0Z5y2DHOiqT.hGbyU5Y.H78f0F3GbeiJO70WRJCwtqdXVnCLe6u', 'Administrator'),
 (2, 'kepala.desa', '$2y$10$IWR1xB0nc2y9Tkke./NTRuOQCKuVoHi76LHzBd/xJTxwdb43mF8Na', 'Kepala Desa'),
-(3, 'petugas_satu', '$2y$10$iZ7VwsEXHOXicTdrO7ECeOlNEaZWttiUi6joi62LmLAdIyfXdRwu2', 'Petugas');
+(3, 'petugas_satu', '$2y$10$iZ7VwsEXHOXicTdrO7ECeOlNEaZWttiUi6joi62LmLAdIyfXdRwu2', 'Petugas'),
+(4, 'petugas_dua', '$2y$10$6Z3tJcNa0fALvwRqIczbtuUUhwMlQw5r8Ccz2.PIEq5ihcKWvC6Fa', 'Petugas');
 
 -- --------------------------------------------------------
 
@@ -185,19 +190,19 @@ ALTER TABLE `tb_warga`
 -- AUTO_INCREMENT untuk tabel `tb_profile`
 --
 ALTER TABLE `tb_profile`
-  MODIFY `id_profile` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_profile` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_surat`
 --
 ALTER TABLE `tb_surat`
-  MODIFY `id_surat` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_surat` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_users`
 --
 ALTER TABLE `tb_users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

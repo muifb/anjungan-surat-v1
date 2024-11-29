@@ -15,6 +15,7 @@ class SuratModel extends Database
             'id_surat',
             'nik',
             'jenis_surat',
+            'no_surat',
             'keterangan',
             'tgl_cetak',
             'id_user'
@@ -29,6 +30,7 @@ class SuratModel extends Database
                         tb_warga.nama AS nama,
                         tb_warga.jk,
                         jenis_surat,
+                        no_surat,
                         keterangan,
                         tgl_cetak,
                         tb_surat.id_user,
@@ -55,6 +57,7 @@ class SuratModel extends Database
         $table = [
             'nik' => $data['nik'],
             'jenis_surat' => $data['jenis_surat'],
+            'no_surat' => $data['no_surat'],
             'keterangan' => $data['keterangan'],
             'tgl_cetak' => $tanggal,
             'id_user' => $_SESSION['login']['id_user']

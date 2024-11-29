@@ -256,7 +256,7 @@
         <div class="row">
             <div class="list-title text-center mb-3">
                 <div><strong><u>SURAT KETERANGAN <?= strtoupper($data['jenis_surat']); ?></u></strong></div>
-                <!-- <div class="fw-normal fs-6">Nomor : 202/0023/KDS/I/2024</div> -->
+                <div class="fw-normal fs-6">Nomor : <?= $data['no_surat']; ?></div>
             </div>
             <div class="container mb-2">
                 <div class="list-title">
